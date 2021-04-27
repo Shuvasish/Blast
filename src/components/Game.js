@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 // STYLING AND ANIMATION
 import styled from "styled-components";
@@ -12,15 +13,17 @@ function Game({ id, name, released, image }) {
   //Load details
   const dispatch = useDispatch();
   const loadDetailsHandler = () => {
-    console.log("dfd");
     dispatch(loadDetails(id));
+    document.body.style.overflow = "hidden";
   };
 
   return (
     <StyledGame onClick={loadDetailsHandler}>
-      <h3>{name}</h3>
-      <p>{released}</p>
-      <img src={image} alt={name} />
+      <Link to={`/game/${id}`}>
+        <h3>{name}</h3>
+        <p>{released}</p>
+        <img src={image} alt={name} />
+      </Link>
     </StyledGame>
   );
 }
@@ -32,6 +35,7 @@ const StyledGame = styled(motion.div)`
   text-align: center;
   border-radius: 1rem;
   overflow: hidden;
+  cursor: pointer;
   img {
     width: 100%;
     height: 40vh;
