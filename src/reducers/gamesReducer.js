@@ -4,10 +4,16 @@ const initState = {
   upcoming: [],
 };
 
-const gamesReducer = (state = initState, actions) => {
-  switch (actions.type) {
+const gamesReducer = (state = initState, action) => {
+  switch (action.type) {
     case "FETCH_GAMES":
-      return { ...state };
+      // console.log(action.payload);
+      return {
+        ...state,
+        popular: action.payload.popular,
+        newGames: action.payload.newGames,
+        upcoming: action.payload.upcoming,
+      };
     default:
       return { ...state };
   }
