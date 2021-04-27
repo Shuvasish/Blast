@@ -1,5 +1,5 @@
 // KEY
-const key = "&key=2f1d74b854e544378848396c088d8c64";
+const key = "key=2f1d74b854e544378848396c088d8c64";
 
 // BASE URL
 const base_url = "https://api.rawg.io/api/";
@@ -39,6 +39,13 @@ const popular_games = `games?dates=${lastYear},${currentDate}&ordering=-rating&p
 const upcoming_games = `games?dates=${currentDate},${nextYear}&ordering=-added&page_size=10`;
 const new_games = `games?dates=${lastYear},${currentDate}&ordering=-released&page_size=10`;
 
-export const popularGamesURL = () => `${base_url}${popular_games}${key}`;
-export const upcomingGamesURL = () => `${base_url}${upcoming_games}${key}`;
-export const newGamesURL = () => `${base_url}${new_games}${key}`;
+export const popularGamesURL = () => `${base_url}${popular_games}&${key}`;
+export const upcomingGamesURL = () => `${base_url}${upcoming_games}&${key}`;
+export const newGamesURL = () => `${base_url}${new_games}&${key}`;
+
+//GAME DETAILS
+export const gameDetailsURL = (game_id) => `${base_url}games/${game_id}?${key}`;
+
+//GAME SCREENSHOTS
+export const gameScreenShotsURL = (game_id) =>
+  `${base_url}games/${game_id}/screenshots?${key}`;

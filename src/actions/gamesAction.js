@@ -9,8 +9,9 @@ export const loadGames = () => async (dispatch) => {
   const newGamesData = await axios.get(newGamesURL());
   const upcomingGamesData = await axios.get(upcomingGamesURL());
   //   console.log(popularData);
-  console.log(upcomingGamesURL());
-  console.log(newGamesURL());
+  // console.log(upcomingGamesURL());
+  // console.log(newGamesURL());
+  // console.log(gameDetailsURL(545015));
   // console.log(dispatch({ type: "fk", dd: "kdf" }));
   dispatch({
     type: "FETCH_GAMES",
