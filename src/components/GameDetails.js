@@ -8,7 +8,9 @@ import { motion } from "framer-motion";
 //REDUX
 import { useSelector } from "react-redux";
 
-const GameDetails = (props) => {
+import { smallImage } from "../util";
+
+const GameDetails = () => {
   const history = useHistory();
   //EXIT DETAIL
   const exitDetailsHandler = (e) => {
@@ -42,14 +44,21 @@ const GameDetails = (props) => {
               </StyledInfo>
             </StyledStats>
             <StyledMedia>
-              <img src={game.background_image} alt={game.name} />
+              <img
+                src={smallImage(game.background_image, 1280)}
+                alt={game.name}
+              />
             </StyledMedia>
             <StyledDescription>
               <p>{game.description_raw}</p>
             </StyledDescription>
             <div className="gallery">
               {screen.results?.map((data) => (
-                <img src={data.image} key={data.id} alt={game.name} />
+                <img
+                  src={smallImage(data.image, 1280)}
+                  key={data.id}
+                  alt={game.name}
+                />
               ))}
             </div>
           </StyledDetails>
