@@ -11,6 +11,7 @@ export const loadGames = () => async (dispatch) => {
   //   console.log(popularData);
   console.log(upcomingGamesURL());
   console.log(newGamesURL());
+  // console.log(dispatch({ type: "fk", dd: "kdf" }));
   dispatch({
     type: "FETCH_GAMES",
     payload: {
