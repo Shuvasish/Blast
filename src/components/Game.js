@@ -51,5 +51,7 @@ const StyledGame = styled(motion.div)`
     display: block;
     object-fit: cover;
   }
+  
+  }
 `;
 export default Game;

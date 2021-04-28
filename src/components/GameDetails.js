@@ -138,6 +138,9 @@ const StyledCardShadow = styled(motion.div)`
   &::-webkit-scrollbar-track {
     background-color: white;
   }
+  @media (max-width: 500px) {
+    /* overflow-x: hidden; */
+  }
 `;
 
 const StyledDetails = styled(motion.div)`
@@ -152,6 +155,13 @@ const StyledDetails = styled(motion.div)`
     width: 100%;
     /* display: block; */
   }
+  @media (max-width: 500px) {
+    width: 90%;
+
+    padding: 1rem 2rem;
+
+    left: 5%;
+  }
 `;
 
 const StyledStats = styled(motion.div)`
@@ -163,10 +173,23 @@ const StyledStats = styled(motion.div)`
     height: 2rem;
     display: inline;
   }
+  @media (max-width: 500px) {
+    h3 {
+      font-size: 1rem;
+    }
+    img {
+      width: 0.8rem;
+      height: 0.8rem;
+      display: inline;
+    }
+  }
 `;
 
 const StyledInfo = styled(motion.div)`
   text-align: center;
+  @media (max-width: 500px) {
+    /* background: red; */
+  }
 `;
 
 const StyledPlatform = styled(motion.div)`
@@ -174,6 +197,11 @@ const StyledPlatform = styled(motion.div)`
   justify-content: space-evenly;
   img {
     margin-left: 3rem;
+  }
+  @media (max-width: 500px) {
+    img {
+      margin-left: 0.2rem;
+    }
   }
 `;
 
@@ -184,10 +212,20 @@ const StyledMedia = styled(motion.div)`
     /* height: 60vh;
     object-fit: cover; */
   }
+  @media (max-width: 500px) {
+    margin-top: 2rem;
+  }
 `;
 
 const StyledDescription = styled(motion.div)`
   margin: 5rem 0rem;
+  @media (max-width: 500px) {
+    margin: 2rem 0rem;
+    p {
+      font-size: 1rem;
+      line-height: 150%;
+    }
+  }
 `;
 
 export default GameDetails;
