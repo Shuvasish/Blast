@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 // STYLING AND ANIMATION
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { popup } from "../animation";
 
 //REDUX
 import { useDispatch } from "react-redux";
@@ -20,7 +21,13 @@ function Game({ id, name, released, image }) {
   };
 
   return (
-    <StyledGame layoutId={stringPathId} onClick={loadDetailsHandler}>
+    <StyledGame
+      variants={popup}
+      initial="hidden"
+      animate="show"
+      layoutId={stringPathId}
+      onClick={loadDetailsHandler}
+    >
       <Link to={`/game/${id}`}>
         <h3>{name}</h3>
         <p>{released}</p>

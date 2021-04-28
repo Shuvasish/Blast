@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 // STYLING AND ANIMATION
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { fadeIn } from "../animation";
 
 //COMPONENTS
 import Game from "../components/Game";
@@ -31,7 +32,7 @@ const Home = () => {
   // console.log(popular, newGames, upcoming);
 
   return (
-    <StyledGameList>
+    <StyledGameList variants={fadeIn} initial="hidden" animate="show">
       {pathId && <GameDetails></GameDetails>}
 
       {searched.length > 0 && (
