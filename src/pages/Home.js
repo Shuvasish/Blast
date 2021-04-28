@@ -25,12 +25,32 @@ const Home = () => {
     dispatch(loadGames());
   }, [dispatch]);
   //GET BACK DATA FROM STORE
-  const { popular, newGames, upcoming } = useSelector((state) => state.games);
+  const { popular, newGames, upcoming, searched } = useSelector(
+    (state) => state.games
+  );
   // console.log(popular, newGames, upcoming);
 
   return (
     <StyledGameList>
       {pathId && <GameDetails></GameDetails>}
+
+      {searched.length > 0 && (
+        <div className="searched">
+          <h2>Searched Games</h2>
+          <StyledGames>
+            {searched.map((game) => (
+              <Game
+                key={game.id}
+                name={game.name}
+                released={game.released}
+                id={game.id}
+                image={game.background_image}
+              ></Game>
+            ))}
+          </StyledGames>
+        </div>
+      )}
+
       <h2>Upcoming Games</h2>
       <StyledGames>
         {upcoming.map((game) => (
