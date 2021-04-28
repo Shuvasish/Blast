@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Blast
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[live link](https://fervent-curran-3f76a9.netlify.app/)
 
-## Available Scripts
+** This app provides all kind of game information like new games, upcoming games, popular games and so on. **
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- popular games
+- upcoming games
+- new games
+- search a game by it's name
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## What I used?
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- react
+- react-router-dom
+- redux
+- redux-thunk
+- axios
+- styled-components
+- framer-motion
+- RAWG api
 
-### `npm test`
+react: core.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+react-router-dom: this is used for routing.
 
-### `npm run build`
+redux: It's used for state management.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+redux-thunk: Redux Thunk middleware allows us to write action creators that return a function instead of an action. The thunk can be used to delay the dispatch of an action, or to dispatch only if a certain condition is met.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+axios: for fetching data.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+styled-components: for styling components.
 
-### `npm run eject`
+framer-motion: This is used for animating some elements.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+RAWG api: This is a awesome api about video game's information.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## UI
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Landing page
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![ui_blast](https://user-images.githubusercontent.com/76765724/116379382-c3b33700-a834-11eb-999b-374ed0a46e52.png)
 
-## Learn More
+# Game Details
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![blast](https://user-images.githubusercontent.com/76765724/116379437-d0378f80-a834-11eb-9c1f-82b19ef377a9.PNG)
