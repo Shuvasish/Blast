@@ -10,6 +10,14 @@ import { useSelector } from "react-redux";
 
 import { smallImage } from "../util";
 
+//IMAGES
+import playstation from "../img/playstation.svg";
+import steam from "../img/steam.svg";
+import xbox from "../img/xbox.svg";
+import nintendo from "../img/nintendo.svg";
+import apple from "../img/apple.svg";
+import gamepad from "../img/gamepad.svg";
+
 const GameDetails = () => {
   const history = useHistory();
   //EXIT DETAIL
@@ -21,6 +29,25 @@ const GameDetails = () => {
     }
     // console.log(e);
   };
+
+  //GET PLATFORM IMAGES
+  const getPlatform = (platform) => {
+    switch (platform) {
+      case "PlayStation 4":
+        return playstation;
+      case "Xbox One":
+        return xbox;
+      case "PC":
+        return steam;
+      case "Nintendo Switch":
+        return nintendo;
+      case "IOS":
+        return apple;
+      default:
+        return gamepad;
+    }
+  };
+
   //DATA
   const { game, screen, isLoading } = useSelector((state) => state.details);
 
@@ -38,7 +65,11 @@ const GameDetails = () => {
                 <h3>Platforms</h3>
                 <StyledPlatform>
                   {game.platforms?.map((data) => (
-                    <h3 key={data.platform.id}>{data.platform.name}</h3>
+                    <img
+                      src={getPlatform(data.platform.name)}
+                      key={data.platform.id}
+                      alt={data.platform.id}
+                    />
                   ))}
                 </StyledPlatform>
               </StyledInfo>
